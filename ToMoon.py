@@ -1,7 +1,6 @@
 from direct.showbase.ShowBase import ShowBase
 from direct.filter.CommonFilters import CommonFilters
 from direct.particles.ParticleEffect import ParticleEffect
-from pathlib import Path
 
 import numpy as np
 import panda3d.core as pc
@@ -12,12 +11,8 @@ pc.loadPrcFile('Configurations/Config.prc')
 
 class Data:
 
-    folder = Path('Data')
-    position_file = folder / 'position_data.txt'
-    time_file = folder / 'time_data.txt'
-
-    position = np.genfromtxt(position_file)
-    time = np.genfromtxt(time_file)
+    position = np.genfromtxt("Data/position_data.txt")
+    time = np.genfromtxt("Data/time_data.txt")
     time_step = 25
 
 
